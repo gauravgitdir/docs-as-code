@@ -1,2 +1,84 @@
-<!DOCTYPE html><html><head> <meta charset="UTF-8"> <title>File Examples | Download redirect...</title> <meta name="description" content="Download redirect page." > <meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet"> <style>h2{font-family: Catamaran,Helvetica,Arial,sans-serif; font-weight: 200; font-size: 50px; color: #333;}section{padding-top: 10%; max-width:100%; text-align: center;}a{color: #00CC66;}a:focus{outline:none; outline-offset:inherit;}@media (max-device-width: 1027px){body{text-align:center; font-size:larger;}section{max-width: 90%;}}@media (max-device-width: 640px){section{max-width: 97%;}}</style></head><body> <section> <h2>Downloading...</h2> <em>Please wait a moment</em><br/><br/><script>document.write('<a href="http://file-examples.com/">[Go Back]</a>');</script></section><script>document.addEventListener('DOMContentLoaded', function(){setTimeout(function (){url=window.location.href.replace('file-examples.com/wp-content/storage/','file-examples.com/storage/fe68321a12696728e9a23a5/'); window.location.replace(url);}, 3000);}, false);</script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Docs as Code Design</title>
+  </head>
+  <body>
+    <h1>Design</h1>
+
+    <p>
+      This document describes the design of the Docs as Code workflow for this project.
+      It explains how documentation is authored, stored, validated, and published alongside
+      application code.
+    </p>
+
+    <h2>Downloading</h2>
+
+    <p>
+      This section describes how the rendered design document is downloaded or accessed by users.
+      In most cases, the generated HTML or site is exposed via a static site host, artifact
+      repository, or internal portal.
+    </p>
+
+    <h2>Architecture</h2>
+
+    <p>The Docs as Code pipeline consists of the following components:</p>
+    <ul>
+      <li>Git repository that stores Markdown, configuration, and assets.</li>
+      <li>Continuous integration pipeline that runs linting and tests on every change.</li>
+      <li>
+        Static site generator or build step that converts Markdown into HTML or another output
+        format.
+      </li>
+      <li>Deployment step that publishes the generated output to a documentation endpoint.</li>
+    </ul>
+
+    <p>
+      Developers and writers work in feature branches, open merge requests, and rely on code review
+      to validate both code and documentation changes before merging.
+    </p>
+
+    <h2>Authoring workflow</h2>
+
+    <p>
+      Documentation is written in Markdown using a lightweight style guide and linting rules.
+      Contributors use their preferred editor or IDE with Markdown support, preview the content
+      locally, and then commit changes.
+    </p>
+
+    <p>On every pushed branch, the CI pipeline:</p>
+    <ul>
+      <li>Runs the Markdown linter to catch style and formatting issues.</li>
+      <li>Optionally runs link checkers or custom validation steps.</li>
+      <li>Produces preview artifacts so reviewers can see the rendered documentation.</li>
+    </ul>
+
+    <h2>Publishing</h2>
+
+    <p>When changes are merged into the main branch, the pipeline:</p>
+    <ul>
+      <li>Regenerates the full documentation site from the Markdown files.</li>
+      <li>Publishes the output to the configured hosting environment.</li>
+      <li>
+        Optionally tags the repository or updates release notes to link to the new documentation.
+      </li>
+    </ul>
+
+    <p>
+      This approach ensures that documentation updates follow the same lifecycle as code changes
+      and are always deployed in a consistent, repeatable way.
+    </p>
+
+    <h2>Future enhancements</h2>
+
+    <p>Potential future enhancements to this design include:</p>
+    <ul>
+      <li>Adding diagrams defined as code and storing them with the Markdown sources.</li>
+      <li>Integrating search and navigation improvements into the generated site.</li>
+      <li>Enforcing stricter rules for link checking and content completeness.</li>
+      <li>Providing templates for new documents to standardize structure and tone.</li>
+    </ul>
+  </body>
+</html>
 
