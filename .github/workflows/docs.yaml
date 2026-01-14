@@ -17,25 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # -----------------------------
-      # Install Pandoc
-      # -----------------------------
-      - name: Install Pandoc
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc
-
-      # -----------------------------
-      # Convert legacy HTML to Markdown
-      # -----------------------------
-      - name: Convert HTML to Markdown
-        run: |
-          if [ -f word/design.html ]; then
-            echo "Converting word/design.html → docs/design.md"
-            pandoc word/design.html -o docs/design.md
-          else
-            echo "No legacy HTML file found, skipping conversion"
-          fi
+ 
 
       # -----------------------------
       # Markdown Lint
