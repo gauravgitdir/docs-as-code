@@ -1,7 +1,5 @@
-## Downloading
-
+# Downloading
 
 Please wait a moment
-
 
 :::
