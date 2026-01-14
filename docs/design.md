@@ -1,7 +1,9 @@
-::: {.section}
-Downloading\...
----------------
 
-*Please wait a moment*\
-\
+::: {.section}
+
+## Downloading
+
+*Please wait a moment*
+
 :::
+
