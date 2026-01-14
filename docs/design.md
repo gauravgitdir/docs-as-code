@@ -2,6 +2,14 @@
 
 This document describes the design of the Docs as Code workflow for this project. It explains how documentation is authored, stored, validated, and published alongside application code.
 
+## Downloading
+
+::: {.section}
+Downloading
+[](https://github.com/gauravgitdir/docs-as-code/blob/main/docs/design.md#downloading)
+Please wait a moment
+:::
+
 ## Goals
 
 The main goals of this design are:
