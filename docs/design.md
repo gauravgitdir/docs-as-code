@@ -1,9 +1,8 @@
-
 ::: {.section}
 
 ## Downloading
 
-*Please wait a moment*
+Please wait a moment
 
 :::
 
